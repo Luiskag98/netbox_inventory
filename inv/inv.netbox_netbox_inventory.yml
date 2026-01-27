@@ -1,0 +1,10 @@
+---
+plugin: netbox.netbox.nb_inventory
+api_endpoint: "http://192.168.193.22:8000/"
+token: "649c0833260f14cb955dac4c5e1900c24eba6dcb"
+validate_certs: false
+query_timeout: 400
+compose:
+  netbox_device_id: "{id}"
+query_filters:
+  - status: active
