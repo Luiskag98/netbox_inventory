@@ -6,5 +6,6 @@ validate_certs: false
 query_timeout: 400
 compose:
   netbox_device_id: "{id}"
+  ansible_host: "{{ (primary_ip4.address | default(primary_ip.address) | default('')) | regex_replace('/.*','') }}"
 query_filters:
   - status: active
